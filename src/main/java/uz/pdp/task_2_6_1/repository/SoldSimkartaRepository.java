@@ -1,0 +1,10 @@
+package uz.pdp.task_2_6_1.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import uz.pdp.task_2_6_1.entity.SoldSimkarta;
+
+import java.util.List;
+
+public interface SoldSimkartaRepository extends JpaRepository<SoldSimkarta, Integer> {
+    boolean existsByPassportNumber(String passportNumber);
+}
